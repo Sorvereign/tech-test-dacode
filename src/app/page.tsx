@@ -17,12 +17,13 @@ type LoginValues = {
 };
 
 export default function Home() {
-  const router = useRouter()
+  const router = useRouter();
   const {
     register,
     formState: { errors, isDirty, isValid },
     handleSubmit,
   } = useForm<LoginValues>({
+    mode: "onBlur",
     defaultValues: {
       email: "",
       password: "",
@@ -38,7 +39,7 @@ export default function Home() {
 
       localStorage.setItem("test", JSON.stringify(response.data));
 
-      router.push("/movieList")
+      router.push("/movieList");
     } catch (error) {
       toast.error(`Tuvimos un error al iniciar sesión: ${error}`);
     }
@@ -78,7 +79,7 @@ export default function Home() {
           errors={errors.password}
           label="Contraseña"
         />
-        <div className="flex flex-row gap-2 ml-3 pt-3">
+        <div className="flex flex-col gap-2 ml-3 pt-3">
           <div className="flex items-center gap-2">
             <Checkbox
               {...register("tyc", {
