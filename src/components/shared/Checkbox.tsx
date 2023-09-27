@@ -12,3 +12,5 @@ export const Checkbox = forwardRef<HTMLInputElement, InputProps>(
     />
   )
 );
+
+Checkbox.displayName = "Checkbox"

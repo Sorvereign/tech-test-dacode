@@ -17,7 +17,11 @@ export const InputField = forwardRef<HTMLInputElement, InputProps>(
         ref={ref}
         className="input input-bordered w-full max-w-md rounded-full bg-purple-brand"
       />
-      {props.errors?.message && <p className="text-red-600">{props.errors?.message}</p>}
+      {props.errors?.message && (
+        <p className="text-red-600">{props.errors?.message}</p>
+      )}
     </div>
   )
 );
+
+InputField.displayName = "InputField";
