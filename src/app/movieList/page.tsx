@@ -3,7 +3,7 @@
 import { MovieResponse } from "../../resTypes/movies";
 import axiosInstance from "../../lib/axiosConfig";
 import useSWR from "swr";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "../../components/shared/Button";
 import Image from "next/image";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";

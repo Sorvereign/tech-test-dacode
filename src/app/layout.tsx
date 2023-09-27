@@ -4,9 +4,6 @@ import { Poppins } from "next/font/google";
 import { Footer } from "../components/layout/Footer";
 import { Navbar } from "../components/layout/Navbar";
 import { Toaster } from "react-hot-toast";
-import { useUser } from "../services/useUser";
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "700", "600"] });
 
